@@ -1,0 +1,10 @@
+import urllib
+import urllib2
+url = 'http://www.baidu.con/login'
+user-agent = 'Mozilla/5.0 (Windows NT 6.1)'
+values = { 'username' :'cqc', 'password' : 'xxxx' }
+headers = { 'User-Agent' : user_agent }
+data = urllib.urlencode(values)
+request = urllib2.Request(url,data,headers)
+response = urllib2.urlopen(request)
+page = response.read()
